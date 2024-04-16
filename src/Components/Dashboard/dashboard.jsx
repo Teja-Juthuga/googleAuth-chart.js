@@ -32,6 +32,36 @@ export const Dashboard = () => {
               <i className="fa-solid fa-user icon"></i>
             </div>
           </div>
+          <div style={{display:"flex",}}>
+            <div className="card card-1">
+              <div style={{textAlign:"end",}}>
+                <i className="fa-solid fa-money-bill" ></i>
+              </div>
+              <p> Total Revenues </p>
+              <h2>  &#x24; 2,129,430 </h2>
+            </div>
+            <div className="card card-2">
+              <div style={{textAlign:"end",}}>
+                <i className="fa-solid fa-tags" ></i>
+              </div>
+              <p> Total Transactions </p>
+              <h2> 1,520 </h2>
+            </div>
+            <div className="card card-3">
+              <div style={{textAlign:"end",}}>
+                <i className="fa-solid fa-thumbs-up" ></i>
+              </div>
+              <p> Total Likes </p>
+              <h2> 9,721 </h2>
+            </div>
+            <div className="card card-4">
+              <div style={{textAlign:"end",}}>
+                <i className="fa-solid fa-users" ></i>
+              </div>
+              <p> Total Users </p>
+              <h2> 892 </h2>
+            </div>
+          </div>
           <div style={{height:"80%", width:"75%"}}>
             <MyChart />
           </div>
