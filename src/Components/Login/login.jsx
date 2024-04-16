@@ -1,6 +1,20 @@
 import "./login.css"
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
+
 
 export const Login = () => {
+    const { loginWithRedirect, isAuthenticated } = useAuth0();
+
+    
+
+
+    const handleGoogleSignIn = () => {
+        loginWithRedirect({
+            connection: 'google-oauth2',
+            mode: 'popup',
+        });
+    }
     return (
         <div className="login-page-container">
             <div className="section-one">
@@ -11,9 +25,13 @@ export const Login = () => {
                     <h1> Sign in </h1>
                     <p> Sign in to your account </p>
                 </div>
-                <div>
-                    <div> Google </div>
-                    <div> Apple </div>
+                <div className="register-cards">
+                    
+                    <div onClick={handleGoogleSignIn} className="r-card"> Sign in with Google </div>
+                    <div onClick={() => loginWithRedirect({ connection: 'apple' })} className="r-card"> Sign in with Apple </div>
+                    {
+                        isAuthenticated ? <Link to={'/Dashboard'}></Link> : null
+                    }
                 </div>
                 <form className="login-card">
                         <div>
@@ -25,9 +43,12 @@ export const Login = () => {
                             <input type="password" />
                         </div>
                         <p href="www.example.com" className="link"> Forgot password? </p>
-                        <button className="signin-btn"> Sign In </button>
+                              
+                        <Link to={'/Dashboard'}>
+                            <button className="signin-btn"> Sign In </button>
+                        </Link>
                 </form>
-                <p>Don't have account? <span className="link"> Register here</span></p>
+                <p style={{textAlign:"center",}}>Don't have account? <span className="link"> Register here</span></p>
             </div>
         </div>
     )

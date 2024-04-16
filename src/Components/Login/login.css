@@ -20,16 +20,60 @@
     justify-content: center;
     align-items: center;
 }
-
-.login-card{
-    height: 385px;
-    width: 317px;
-    background-color: #FFFFFF;
-    padding: 18px;
+.register-cards{
+    display: flex;
+    padding: 8px;
 }
+.r-card{
+    height: 30px;
+    width: 180px;
+    border-radius: 10px;
+    font-weight: 400;
+    text-align: center;
+    background-color: #FFFFFF;
+    color: #858585;
+    padding: 6px;
+    margin: 6px;    
+}
+.login-card{
+    background-color: #FFFFFF;
+    padding: 24px;
+    margin: 8px;
+    border-radius: 20px;
+}
+
+.login-card div{
+    margin-top: 14px;
+}
+
+input[type=text] {
+    border: 1px solid #000000;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: #EAEAEA;
+}
+
+input[type=password] {
+    border: 1px solid #000000;
+    font-weight: 400;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: #EAEAEA;
+  }
+
 .link{
     color: #346BD4;
 }
 .signin-btn{
-
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    background-color: #000000;
+    color: #FFFFFF;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
 }
