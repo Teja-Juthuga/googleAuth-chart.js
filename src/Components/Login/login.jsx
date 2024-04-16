@@ -1,5 +1,5 @@
 import "./login.css"
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
 
@@ -27,8 +27,8 @@ export const Login = () => {
                 </div>
                 <div className="register-cards">
                     
-                    <div onClick={handleGoogleSignIn} className="r-card"> Sign in with Google </div>
-                    <div onClick={() => loginWithRedirect({ connection: 'apple' })} className="r-card"> Sign in with Apple </div>
+                    <div onClick={handleGoogleSignIn} className="r-card"><i class="fa-brands fa-google"></i> Sign in with Google </div>
+                    <div onClick={() => loginWithRedirect({ connection: 'apple' })} className="r-card"><i class="fa-brands fa-apple"></i> Sign in with Apple </div>
                     {
                         isAuthenticated ? <Link to={'/Dashboard'}></Link> : null
                     }
@@ -43,9 +43,9 @@ export const Login = () => {
                             <input type="password" />
                         </div>
                         <p href="www.example.com" className="link"> Forgot password? </p>
-                              
+                        <button className="signin-btn"> Sign In </button>
                         <Link to={'/Dashboard'}>
-                            <button className="signin-btn"> Sign In </button>
+                            <button className="signin-btn"> Redirect to Dashboard </button>
                         </Link>
                 </form>
                 <p style={{textAlign:"center",}}>Don't have account? <span className="link"> Register here</span></p>

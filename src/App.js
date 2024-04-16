@@ -6,7 +6,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Login } from "./Components/Login/login.jsx";
 import { Dashboard } from "./Components/Dashboard/dashboard.jsx";
 
-
 export const app = createContext();
 
 
